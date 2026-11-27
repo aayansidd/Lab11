@@ -42,7 +42,6 @@ void selectionSort(int arr[], int n) {
     if (n <= 1) {
         cout << "No passes required (n <= 1).\n";
         cout << "Total Comparisons: 0 | Total Swaps: 0\n";
-        cout << "--------------------------------------------------\n";
         return;
     }
 
@@ -75,7 +74,7 @@ void selectionSort(int arr[], int n) {
     cout << "Sorted array:  ";
     printArray(arr, n);
     cout << "\nTotal Comparisons: " << comparisons << " | Total Swaps: " << swaps << "\n";
-    cout << "--------------------------------------------------\n";
+    cout << "\n";
 }
 
 int main() {
@@ -91,25 +90,25 @@ int main() {
     copyArray(unsortedOrig, workArr, SIZE);
     selectionSort(workArr, SIZE);
 
-    cout << "=== TEST 2: ALREADY SORTED ARRAY ===\n";
+    cout << "TEST 2: ALREADY SORTED ARRAY \n";
     copyArray(sortedOrig, workArr, SIZE);
     selectionSort(workArr, SIZE);
 
-    cout << "=== TEST 3: REVERSE SORTED ARRAY ===\n";
+    cout << " TEST 3: REVERSE SORTED ARRAY\n";
     copyArray(reverseOrig, workArr, SIZE);
     selectionSort(workArr, SIZE);
 
     // 2. Repeated values test
-    cout << "=== TEST 4: REPEATED VALUES ===\n";
+    cout << " TEST 4: REPEATED VALUES \n";
     int repeatedArr[] = {4, 2, 4, 1, 2, 1};
     selectionSort(repeatedArr, 6);
 
     // 3. Edge cases: n = 1 and n = 0
-    cout << "=== TEST 5: SINGLE ELEMENT (n = 1) ===\n";
+    cout << " TEST 5: SINGLE ELEMENT (n = 1) \n";
     int singleArr[] = {42};
     selectionSort(singleArr, 1);
 
-    cout << "=== TEST 6: EMPTY ARRAY (n = 0) ===\n";
+    cout << "TEST 6: EMPTY ARRAY\n";
     int emptyArr[] = {};
     selectionSort(emptyArr, 0);
 
